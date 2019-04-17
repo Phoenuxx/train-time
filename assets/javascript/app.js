@@ -103,14 +103,12 @@ function fieldClear() {
         console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
 
-
         newRow = $("<tr>").append(
             $("<td>").text(newName),
             $("<td>").text(newDest),
             $("<td>").text(newFreq),
             $("<td>").text(nextTrain),
-            $("<td>").text(minutesAway),
-            $("<td>").addClass("remove").text("REMOVE"));
-        $("tbody").append(newRow);
+            $("<td>").text(minutesAway));
+            $("tbody").append(newRow);
+        });
         $("#submit").on("click", submitClick);
-    });
