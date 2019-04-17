@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta char="UTF-8">
+    <title>Online Train Schedule</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Train Schedule</h1>
+            <p class="lead">A Directory of All Active Train Schedules</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 90rem;">
+        <div class="card-header">
+            Current Train Schedule
+        </div>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival(Military Time)</th>
+                    <th scope="col">Minutes Away</th>
+                    <th scope="col">Maint.</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+    <div class="card" style="width: 90rem;">
+        <div class="card-header">
+            Add Train
+        </div>
+        <ul class="list-group list-group-flush">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Train Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Thomas The Train" id="typed-name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Destination</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Narnia" id="typed-dest">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Frequency (Minutes)</label>
+                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="180" id="typed-freq">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">First Train Time (Military Time)</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="1700" id="typed-start">
+            </div>
+        </ul>
+        <input class="btn btn-primary" type="submit" value="Submit" id="submit">
+    </div>
+</body>
+
+
+<script src="assets/javascript/app.js"></script>
+</html>
